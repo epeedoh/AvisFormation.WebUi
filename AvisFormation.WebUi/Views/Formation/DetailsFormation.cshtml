@@ -1,0 +1,22 @@
+﻿@model AvisFormation.WebUi.Models.FormationAvecAvisViewModel
+
+
+@{
+    ViewBag.Title = Model.FormationNom;
+}
+
+<h2>@Model.FormationNom</h2>
+<br />
+
+<p>@Model.FormationDescription</p>
+<br />
+
+Laissez un avis sur cette formation.
+
+           @foreach(var avis in Model.Avis)
+            {
+
+               <div>@avis.Nom</div>
+               <div>@avis.Description</div>
+
+            }
